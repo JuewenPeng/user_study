@@ -1,0 +1,78 @@
+﻿body {
+            background-attachment: fixed;
+            animation-duration: 40000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-name: GrowShrink;
+        }
+
+        @keyframes GrowShrink {
+            from{
+                background-image: url("1.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            20% {
+                background-image: url("1.jpg");
+                background-size: 2560px 1440px;
+                background-position-x: -320px;
+                background-position-y: -180px;
+            }
+            21% {
+                background-image: url("2.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            40% {
+                background-image: url("2.jpg");
+                background-size: 2560px 1440px;
+                background-position-x: -320px;
+                background-position-y: -180px;
+            }
+            41% {
+                background-image: url("3.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            60% {
+                background-image: url("3.jpg");
+                background-size: 2560px 1440px;
+                background-position-x: -320px;
+                background-position-y: -180px;
+            }
+            61% {
+                background-image: url("4.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            80% {
+                background-image: url("4.jpg");
+                background-size: 2560px 1440px;
+                background-position-x: -320px;
+                background-position-y: -180px;
+            }
+            81% {
+                background-image: url("5.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+            99% {
+                background-image: url("5.jpg");
+                background-size: 2560px 1440px;
+                background-position-x: -320px;
+                background-position-y: -180px;
+            }
+
+            to {
+                background-image: url("1.jpg");
+                background-size: 1920px 1080px;
+                background-position-x: 0px;
+                background-position-y: 0px;
+            }
+        }
+		

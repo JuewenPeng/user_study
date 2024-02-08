@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        img{
+            max-height: 448px;
+            max-width: 336px;
+        }
+        td{
+            height: 500px;
+            min-width: 340px;
+            max-width: 400px;
+            /*padding-top: 10px*/
+        }
+        input{
+            height: 30px;
+            width: 30px;
+            font-size: 30px;
+            vertical-align: text-bottom;
+            margin-bottom: -2px;
+        }
+        b{
+            font-size: 20px;
+            color: black;
+        }
+        button {
+            max-width: 300px;
+            min-width: 200px;
+            max-height: 60px;
+            min-height: 40px;
+            font-size: 40px;
+            color: black;
+        }
+        h3 {
+            margin-block-start: 1px;
+            margin-block-end: 1px;
+        }
+        .label {
+            font-size: 20px;
+            color: black;
+        }
+        .shadow {
+            width: 112px;
+            height: 149px;
+            background-color: black;
+            opacity: .2;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+            /*cursor: move;*/
+            pointer-events: none;
+        }
+    </style>
+    <title>UserStudy</title>
+
+</head>
+<body>
+
+<div id="div_1">
+</div>
+
+<div id="div_2">
+    <ul>
+        <li style="font-size: 40px">
+            <!-- Thanks for your participation -->
+            <!-- <br> -->
+            <a id="submit"></a>
+        </li>
+    </ul>
+</div>
+
+
+<table border="1" cellspacing="10" id="tb" frame=void>
+    <tr>
+        <td valign="middle" align="center" id="td_0">
+            <img id="img0" onmouseover="magnifystart(0, 0)" onmouseout="magnifyend(0, 0)" onmousemove="magnifying(0, 0)">
+            <div id="shadow0" class="shadow"></div>
+            <h3 id="a0" style="margin-top: 7px;">Input Image</h3>
+        </td>
+        <td valign="middle" align="center" id="td_1" onclick="colorChange(1)">
+            <img id="img1" onmouseover="magnifystart(1, 0)" onmouseout="magnifyend(1, 0)" onmousemove="magnifying(1, 0)">
+            <div id="shadow1" class="shadow"></div>
+            <h3 id="a1" style="margin-top: 7px;">Method 1</h3>
+        </td>
+        <td valign="middle" align="center" id="td_2" onclick="colorChange(2)">
+            <img id="img2" onmouseover="magnifystart(2, 0)" onmouseout="magnifyend(2, 0)" onmousemove="magnifying(2, 0)">
+            <div id="shadow2" class="shadow"></div>
+            <h3 id="a2" style="margin-top: 7px;">Method 2</h3>
+        </td>
+        <td valign="middle" colspan="1">
+            <div class="label" id="txt">
+                <div align="center"><b><font size="6">Rules</font></b></div>
+                <br>
+                <li>
+                    Compare <b style="color: red">Method 1</b> and <b style="color: red">Method 2</b>，and click the better one with <b>sharp boundaries at in-focus areas and layered circle-of-confusion effects at out-of-focus areas</b>. Click again to cancel. <b>If it is hard to judge, don't select anyone and click "Next"</b>.
+                </li>
+                <br>
+                <li>
+                    If you want to end this test, you can click "Submit". For data collection, you have to answer at least 10 questions before you click "Submit";
+                </li>
+                <br>
+                <li>
+                    Please do not refresh the page, or the data will be invalidated.
+                </li>
+            </div>
+            <br>
+        </td>
+    </tr>
+    <tr>
+        <td valign="middle" align="center" id="td_mag_0">
+            <div id="big0" style="width: 336px; height: 448px; position: relative; overflow: hidden; display: none;">
+                <img id="bigImg0" style="zoom: 400%; position: absolute; top: 0px; left: 0px">
+            </div>
+            <h3 style="margin-top: 12px;">Magnification Window 0</h3>
+            <h3 id="a3"></h3>
+        </td>
+        <td valign="middle" align="center" id="td_mag_1">
+            <div id="big1" style="width: 336px; height: 448px; position: relative; overflow: hidden; display: none;">
+                <img id="bigImg1" style="zoom: 400%; position: absolute; top: 0px; left: 0px">
+            </div>
+            <h3 style="margin-top: 12px;">Magnification Window 1</h3>
+            <h3 id="a3"></h3>
+        </td>
+        <td valign="middle" align="center" id="td_mag_2">
+            <div id="big2" style="width: 336px; height: 448px; position: relative; overflow: hidden; display: none;">
+                <img id="bigImg2" style="zoom: 400%; position: absolute; top: 0px; left: 0px">
+            </div>
+            <h3 style="margin-top: 12px;">Magnification Window 2</h3>
+            <h3 id="a3"></h3>
+        </td>
+        <td valign="middle" align="center">
+            <button onclick="next()">Next</button>
+            <br>
+            <br>
+            <button onclick="submitTB()" id="submitBT" style="color: gray;">Submit</button>
+            <br>
+            <div id="page" style="font-size: 35px; margin-top: 10px;"></div>
+            <div class="label" id="tip_table_2" style="color: black">(Answer at least 10 questions)</div>
+        </td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
+
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="tool.js"></script>
+<script type="text/javascript" src="nameList.js"></script>
+<script type="text/javascript" src="global.js"></script>
+<script type="text/javascript" src="mainFunction.js"></script>
+
+<script>
+    init()
+    start()
+
+</script>
