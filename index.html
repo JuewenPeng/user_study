@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartLab</title>
+
+    <style>
+        table {margin-left:70%; margin-top:25%}
+        tr > th {text-align: center; background: lightblue; color: white}
+        td {border: thin solid gray; text-align: center}
+
+        .login-banner {width:100%;height:800px; background:#f8f8f8;}
+        .login-main {max-width:1000px;height:470px; margin:0px auto; position:relative;}
+        .login-banner-bg {display: none}
+        .login-box {width: 100%;max-width:360px;height: 180px;position: absolute;margin-top:100px;margin-bottom:200px;margin-left:0px;background:#f8f8f8;right:2%;padding:10px 20px;}
+        /*div {opacity: 0.9;}*/
+    </style>
+    <link rel="stylesheet" href="css/ui.css" />
+    <link href="css/dlstyle.css" rel="stylesheet" type="text/css">
+    <!--<link rel="stylesheet" type="text/css" href="css//background.css" />-->
+</head>
+<body>
+
+<!-- <div class="login-boxtitle"> -->
+<!-- </div> -->
+
+<div class="login-banner" style="width:100%;height:900px; background:#f8f8f8;">
+    <div class="login-main">
+        <div class="login-banner-bg">
+            <img src="./images/image/IMG_4681.jpg" style="margin:50px auto; padding-left: 340px; height: 220px; background:#f8f8f8; float: left">
+            <img src="./images/bokehme/IMG_4681.jpg" style="margin:50px auto; padding-left: 5px; height: 220px; background:#f8f8f8; float: left">
+        </div>
+        
+
+        <div class="login-box" style="width: 100%;max-width:800px;height: 250px;position: absolute;margin:300px 70px;padding:10px 20px;">
+            <!-- <h3 class="title" style="margin-top: 0px">焦外成像 Bokeh Rendering</h3> -->
+            <div class="clear"></div>
+            <div class="login-form" style="margin:0 auto">
+                感谢您在百忙之中能参与此次问卷调查。这项问卷调查的目的是比较不同的散景渲染方法，任务要求从大景深（全图清晰）图像渲染小景深（聚焦区域清晰，失焦区域模糊）图像。让我们开始吧！
+                <br>
+                <br>
+                <!-- Thank you for taking the time to participate in this survey. This survey's purpose is to compare different bokeh rendering methods. The task is rendering a shallow depth-of-field image (sharp in in-focus areas & blurry in out-of-focus areas) from a wide depth-of-field image (sharp in whole areas). Let's start! -->
+            </div>
+            <!-- <br> -->
+<!--             <div class="login-form" style="margin:0 auto; text-align:center">
+                <strong style="font-size: 20px; font-weight:bold">首先请选择最符合您的情况<br>Firstly, please choose your identity from the options below:</strong><br>
+                <input type="radio" name="type_user" value="1" id="input_user_1">美术相关的职业人士 Aesthetics-related professional<br>
+                <input type="radio" name="type_user" value="1" id="input_user_2">美学相关业余爱好者 Aesthetics-related amateurs<br>
+                <input type="radio" name="type_user" value="1" id="input_user_3">没有太多美学经验者 No aesthetic experience<br>
+            </div> -->
+
+            <div class="am-cf" style="width: 200px;">
+                <input type="button" name="btn-submit" value="开始（中文）" class="am-btn am-btn-primary am-btn-sm" onclick="start(1)">
+                <br><br>
+                <input type="button" name="btn-submit" value="Start (English)" class="am-btn am-btn-primary am-btn-sm" onclick="start(2)">
+                <a hidden id="a-bt"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <div class="footer-hd">
+        <p>
+            <a href="#">关于作者</a>
+            <b>|</b>
+            <a href="#">合作伙伴</a>
+            <b>|</b>
+            <a href="#">联系我们</a>
+            <b>|</b>
+            <a href="#">实验室</a>
+        </p>
+    </div>
+    <div class="footer-bd">
+        <p>
+            <a href="#">关于作者</a>
+            <a href="#">合作伙伴</a>
+            <a href="#">联系我们</a>
+            <a href="#">实验室</a>
+            <em>版权所有"暂不可见"</em>
+        </p>
+    </div>
+</div>
+
+
+</body>
+</html>
+
+<script>
+    function start(L) {
+        // var inputUsers = document.getElementsByName('type_user')
+        // var flag = 0
+        // for(var i=0;i<inputUsers.length;i++){
+        //     if(inputUsers[i].checked==true){
+        //         flag = i+1
+        //         break
+        //     }
+        // }
+        // flag=1
+        flag=2
+        if(flag==0){
+            alert('首先请选择最符合您的情况后再点击开始 Please choose your identity')
+        }else{
+            var a = document.getElementById('a-bt')
+            var userStudyType = getWindowWH()
+            if(L==1){
+                if(userStudyType==1){
+                    a.href = 'userStudyCH.html?userType='+flag
+                }else {
+                    a.href = 'userStudyCH.html?userType='+flag
+                }
+            }else if(L==2){
+                if(userStudyType==1){
+                    a.href = 'userStudyEN.html?userType='+flag
+                }else {
+                    a.href = 'userStudyEN.html?userType='+flag
+                }
+            }
+            //alert(a.href)
+            a.click()
+        }
+    }
+    function getWindowWH() {
+        var w = window.innerWidth
+        var h = window.innerHeight
+        if(w>=h){
+            return 1
+        }else {
+            return 2
+        }
+    }
+</script>
