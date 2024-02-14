@@ -243,10 +243,10 @@ function change(event, a, row){
     shadowW = W / 3
     shadowH = H / 3
     var evt=event
-    var moveL=evt.offsetX-shadowW/1.5
-    var moveT=evt.offsetY-shadowH/1.5
-    var moveLGlobal=evt.layerX-shadowW/1.5
-    var moveTGlobal=evt.layerY-shadowH/1.5
+    var moveL=evt.offsetX-shadowW/2
+    var moveT=evt.offsetY-shadowH/2
+    var moveLGlobal=evt.layerX-shadowW/2
+    var moveTGlobal=evt.layerY-shadowH/2
 
     if(moveL<0){
         moveLGlobal=moveLGlobal-moveL
